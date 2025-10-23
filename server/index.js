@@ -9,7 +9,7 @@ const authRouter = require('./routes/authRoutes');
 const productRoutes = require("./routes/productRoutes");
 const path = require("path");
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 2000;
 
 
 
