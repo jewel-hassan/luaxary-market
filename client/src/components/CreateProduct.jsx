@@ -10,7 +10,7 @@ const CreateProduct = () => {
     const [message, setMessage] = useState("");
     const [loading, setLoading] = useState(false);
 
-    const BASE_URL = "http://localhost:2000/api/products/create"; // ✅ তোমার backend URL
+    const BASE_URL = "https://luaxary-market-q6rx.vercel.app/api/products/create"; // ✅ তোমার backend URL
 
     // 🔹 Image preview
     const handleImageChange = (e) => {

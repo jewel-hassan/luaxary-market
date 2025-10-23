@@ -38,7 +38,7 @@ const Register = () => {
             data.append("password", formData.password);
             if (profilePic) data.append("profilePic", profilePic);
 
-            const res = await axios.post("http://localhost:2000/auth/register", data, {
+            const res = await axios.post("https://luaxary-market-q6rx.vercel.app/auth/register", data, {
                 headers: { "Content-Type": "multipart/form-data" },
             });
 

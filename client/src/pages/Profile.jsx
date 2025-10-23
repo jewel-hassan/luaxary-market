@@ -137,7 +137,7 @@ const Profile = () => {
                 };
 
                 const { data } = await axios.get(
-                    "http://localhost:2000/auth/profile", // আপনার API url দিন
+                    "https://luaxary-market-q6rx.vercel.app/auth/profile", // আপনার API url দিন
                     config
                 );
 
