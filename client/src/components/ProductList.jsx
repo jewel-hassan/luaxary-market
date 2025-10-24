@@ -11,7 +11,7 @@ const ProductList = () => {
     const [search, setSearch] = useState("");
     const [currentPage, setCurrentPage] = useState(1);
 
-    const BASE_URL = "https://luaxary-market-q6rx.vercel.app/api/products";
+    const BASE_URL = "https://localhost:2000/api/products";
     const PRODUCTS_PER_PAGE = 9;
 
     // 🔹 Fetch all products
@@ -75,7 +75,7 @@ const ProductList = () => {
     // 🔹 Download image (fixed)
     const handleDownload = async (image) => {
         try {
-            const url = image.startsWith("http") ? image : `https://luaxary-market-q6rx.vercel.app${image}`;
+            const url = image.startsWith("http") ? image : `https://localhost:2000${image}`;
             const response = await fetch(url);
             const blob = await response.blob();
             const blobUrl = window.URL.createObjectURL(blob);

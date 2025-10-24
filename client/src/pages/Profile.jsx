@@ -1,109 +1,4 @@
-// import React, { useEffect, useState } from "react";
-// import axios from "axios";
-// import { Link, useNavigate } from "react-router-dom";
 
-// const Profile = () => {
-//     const [user, setUser] = useState(null);
-//     const [loading, setLoading] = useState(true);
-//     const [error, setError] = useState("");
-//     const navigate = useNavigate();
-
-//     // Fetch profile
-//     useEffect(() => {
-//         const fetchProfile = async () => {
-//             try {
-//                 const token = localStorage.getItem("token");
-//                 if (!token) {
-//                     setError("You are not logged in.");
-//                     setLoading(false);
-//                     return;
-//                 }
-
-//                 const config = {
-//                     headers: {
-//                         Authorization: `Bearer ${token}`,
-//                     },
-//                 };
-
-//                 const { data } = await axios.get(
-//                     "http://localhost:2000/auth/profile", // replace with your API url
-//                     config
-//                 );
-
-//                 if (data.success) {
-//                     setUser(data.user);
-//                 } else {
-//                     setError("Failed to fetch profile.");
-//                 }
-//             } catch (err) {
-//                 setError(err.response?.data?.message || err.message);
-//             } finally {
-//                 setLoading(false);
-//             }
-//         };
-
-//         fetchProfile();
-//     }, []);
-
-//     // Logout function
-//     const handleLogout = () => {
-//         localStorage.removeItem("token");
-//         navigate("/login"); // redirect to login page
-//     };
-
-//     if (loading) {
-//         return (
-//             <div className="flex items-center justify-center min-h-screen">
-//                 <p className="text-lg font-semibold text-purple-600">Loading...</p>
-//             </div>
-//         );
-//     }
-
-//     if (error) {
-//         return (
-//             <div className="flex items-center justify-center min-h-screen">
-//                 <p className="text-red-500 font-semibold">{error}</p>
-//             </div>
-//         );
-//     }
-
-//     return (
-//         <div className="min-h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-400 flex items-center justify-center px-4 py-10">
-
-//             <Link
-//                 to="/"
-//                 className="text-2xl md:text-3xl font-extrabold text-purple-700 hover:text-purple-900 transition duration-300"
-//             >
-//                 Luaxary Market
-//             </Link>
-//             <div className="bg-white rounded-3xl shadow-2xl p-8 max-w-md w-full text-center relative">
-//                 {/* Profile Image */}
-//                 <img
-//                     src={user.profilePic}
-//                     alt={user.username}
-//                     className="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-purple-500"
-//                 />
-
-//                 {/* User Info */}
-//                 <h2 className="text-2xl font-bold text-gray-800 mb-2">{user.username}</h2>
-//                 <p className="text-gray-600 mb-6">{user.email}</p>
-
-//                 {/* Buttons */}
-//                 <div className="flex justify-center space-x-4">
-//                     <button
-//                         onClick={handleLogout}
-//                         className="px-6 py-2 bg-red-500 text-white font-semibold rounded-full hover:bg-red-600 transition duration-300"
-//                     >
-//                         Logout
-//                     </button>
-
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default Profile;
 
 
 
@@ -137,7 +32,7 @@ const Profile = () => {
                 };
 
                 const { data } = await axios.get(
-                    "https://luaxary-market-q6rx.vercel.app/auth/profile", // আপনার API url দিন
+                    "https://localhost:2000/auth/profile", // আপনার API url দিন
                     config
                 );
 

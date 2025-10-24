@@ -17,7 +17,7 @@ const Navbar = () => {
 
             // Ensure profilePic has full URL
             if (parsedUser.profilePic && !parsedUser.profilePic.startsWith("http")) {
-                parsedUser.profilePic = `https://luaxary-market-q6rx.vercel.app${parsedUser.profilePic}`;
+                parsedUser.profilePic = `https://localhost:2000${parsedUser.profilePic}`;
             }
 
             setUser(parsedUser);
