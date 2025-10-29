@@ -172,7 +172,7 @@ const Profile = () => {
 
                 if (data.success) {
                     // ProfilePic URL fix
-                    if (data.user.profilePic && !data.user.profilePic.startsWith("http")) {
+                    if (data.user.profilePic && !data.user.profilePic.startsWith("https")) {
                         data.user.profilePic = `${import.meta.env.VITE_API_BASE_URL}${data.user.profilePic}`;
                     }
 
