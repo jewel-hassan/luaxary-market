@@ -32,7 +32,7 @@ const Profile = () => {
                 };
 
                 const { data } = await axios.get(
-                    "https://localhost:2000/auth/profile", // আপনার API url দিন
+                    "http://localhost:2000/auth/profile", // আপনার API url দিন
                     config
                 );
 

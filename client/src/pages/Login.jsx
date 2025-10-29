@@ -27,7 +27,7 @@ const Login = () => {
         setSuccessMsg("");
 
         try {
-            const res = await axios.post("https://localhost:2000/auth/login", formData);
+            const res = await axios.post("http://localhost:2000/auth/login", formData);
 
             // Response data থেকে token এবং user বের করা
             const { token, user, message } = res.data;

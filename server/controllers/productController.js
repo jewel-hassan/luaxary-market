@@ -4,28 +4,7 @@ const path = require("path");
 const sharp = require("sharp");
 
 // ✅ Create Product
-// exports.createProduct = async (req, res) => {
-//   try {
-//     const { title, price } = req.body;
-//     const image = req.file ? `/uploads/products/${req.file.filename}` : undefined;
 
-//     if (!title || !price) {
-//       return res.status(400).json({ message: "Title and Price are required" });
-//     }
-
-//     const product = new Product({
-//       title,
-//       price,
-//       image,
-//     });
-
-//     await product.save();
-//     res.status(201).json({ message: "Product created successfully", product });
-//   } catch (error) {
-//     console.error("Create Product Error:", error);
-//     res.status(500).json({ message: "Internal server error" });
-//   }
-// };
 
 exports.createProduct = async (req, res) => {
   try {
